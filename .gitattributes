@@ -1,0 +1,8 @@
+# Os arquivos de dados e o manifesto DEVEM usar LF: o KronTech calcula o
+# SHA-256 do conteudo servido pelo raw.githubusercontent para comparar versoes,
+# e CRLF mudaria o hash a cada checkout no Windows.
+*.txt   text eol=lf
+*.json  text eol=lf
+*.mjs   text eol=lf
+*.yml   text eol=lf
+*.md    text eol=lf

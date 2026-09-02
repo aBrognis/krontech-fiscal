@@ -1,0 +1,21 @@
+00|normal|Tributada integralmente
+10|normal|Tributada e com cobranca do ICMS por substituicao tributaria
+20|normal|Com reducao de base de calculo
+30|normal|Isenta ou nao tributada e com cobranca do ICMS por substituicao tributaria
+40|normal|Isenta
+41|normal|Nao tributada
+50|normal|Suspensao
+51|normal|Diferimento
+60|normal|ICMS cobrado anteriormente por substituicao tributaria
+70|normal|Com reducao de base de calculo e cobranca do ICMS por substituicao tributaria
+90|normal|Outras
+101|simples|Tributada pelo Simples Nacional com permissao de credito
+102|simples|Tributada pelo Simples Nacional sem permissao de credito
+103|simples|Isencao do ICMS no Simples Nacional para faixa de receita bruta
+201|simples|Tributada pelo Simples Nacional com permissao de credito e com cobranca do ICMS por ST
+202|simples|Tributada pelo Simples Nacional sem permissao de credito e com cobranca do ICMS por ST
+203|simples|Isencao do ICMS no Simples Nacional para faixa de receita bruta e com cobranca do ICMS por ST
+300|simples|Imune
+400|simples|Nao tributada pelo Simples Nacional
+500|simples|ICMS cobrado anteriormente por ST ou por antecipacao
+900|simples|Outros

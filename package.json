@@ -1,0 +1,16 @@
+{
+  "name": "krontech-fiscal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tabelas de referencia fiscal do KronTech (CFOP, NCM, CEST, CST, cClassTrib, aliquotas ICMS, transicao da Reforma Tributaria).",
+  "scripts": {
+    "baixar:ncm": "node scripts/baixar-ncm.mjs",
+    "baixar:cest": "node scripts/baixar-cest.mjs",
+    "gerar:icms": "node scripts/gerar-icms-aliquota.mjs",
+    "manifesto": "node scripts/atualizar-manifesto.mjs",
+    "validar": "node scripts/validar.mjs",
+    "atualizar": "npm run baixar:ncm && npm run baixar:cest && npm run gerar:icms && npm run validar && npm run manifesto"
+  },
+  "engines": { "node": ">=20" }
+}

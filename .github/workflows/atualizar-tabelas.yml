@@ -1,0 +1,48 @@
+name: Atualizar tabelas fiscais
+
+# Roda mensalmente e sob demanda. Baixa NCM/CEST das fontes oficiais, revalida
+# tudo, recalcula o manifesto e abre um PR se algo mudou. Nunca faz push direto
+# na main — a revisao humana continua no meio.
+on:
+  schedule:
+    - cron: "0 6 1 * *"   # dia 1 de cada mes, 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Baixar e regenerar
+        run: |
+          node scripts/baixar-ncm.mjs || echo "NCM falhou - mantendo arquivo anterior"
+          node scripts/baixar-cest.mjs || echo "CEST falhou - mantendo arquivo anterior"
+          node scripts/gerar-icms-aliquota.mjs
+
+      - name: Validar
+        run: node scripts/validar.mjs
+
+      - name: Recalcular manifesto
+        run: node scripts/atualizar-manifesto.mjs
+
+      - name: Abrir PR se houve mudanca
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: atualizacao automatica das tabelas fiscais"
+          branch: auto/atualizar-tabelas
+          title: "Atualizacao automatica das tabelas fiscais"
+          body: |
+            Atualizacao gerada pelo workflow mensal.
+
+            Revisar o diff dos arquivos em `dados/` e do `manifesto.json`
+            antes de fazer merge. Apos o merge, os apps KronTech passam a
+            ver a nova versao pelo botao "Verificar atualizacoes".
+          labels: automacao, fiscal

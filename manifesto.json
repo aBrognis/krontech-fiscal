@@ -1,0 +1,75 @@
+{
+  "gerado_em": "2026-09-02",
+  "descricao": "Tabelas de referencia fiscal do KronTech. O app compara este manifesto com o empacotado e avisa quando ha versao mais nova. Cada arquivo e re-semeado sem sobrescrever linhas com origem='manual'.",
+  "base_raw": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/",
+  "tabelas": {
+    "cfop": {
+      "versao": "2026.09.02",
+      "arquivo": "cfop.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/cfop.txt",
+      "linhas": 672,
+      "formato": "codigo|descricao|tipo|grupo",
+      "fonte": "Convenio SINIEF s/n de 1970 e alteracoes (Ajuste SINIEF)",
+      "fonte_url": "https://www.confaz.fazenda.gov.br/legislacao/ajustes/sinief",
+      "hash": "10740dfa5b568d2f04d12ea7ede487831816aa0f094cfdbdd8329831cf4e7fb6"
+    },
+    "ncm": {
+      "versao": "2026.09.02",
+      "arquivo": "ncm.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/ncm.txt",
+      "linhas": 96,
+      "formato": "codigo|descricao|aliquota_ipi",
+      "fonte": "Tabela NCM/SH da Receita Federal + TIPI (Decreto 11.158/2022)",
+      "fonte_url": "https://portalunico.siscomex.gov.br/classif/api/publico/nomenclatura/download/json",
+      "hash": "02d61a5c794b06a44e75bbca4717c51dca551ac3f6210e9f09c63c01ec73acbe"
+    },
+    "cest": {
+      "versao": "2026.09.02",
+      "arquivo": "cest.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/cest.txt",
+      "linhas": 27,
+      "formato": "codigo|ncm|descricao|segmento",
+      "fonte": "Convenio ICMS 142/2018 (Anexos I a XXVI)",
+      "fonte_url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2018/CV142_18",
+      "hash": "4b19b88a15e7478604498158fef0f45282058a08bbff9a6b56c0f6598cc320cd"
+    },
+    "cst_icms": {
+      "versao": "2026.09.02",
+      "arquivo": "cst_icms.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/cst_icms.txt",
+      "linhas": 21,
+      "formato": "codigo|regime|descricao",
+      "fonte": "Ajuste SINIEF 07/2005 (Anexo - Codigo de Situacao Tributaria) e CSOSN",
+      "hash": "a55dc450dc0dd893940042f5ec9fee1ee0915e1597822e94b1d4ed2b87fd2f64"
+    },
+    "cclass_trib": {
+      "versao": "2026.09.02-preliminar",
+      "arquivo": "cclass_trib.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/cclass_trib.txt",
+      "linhas": 15,
+      "formato": "codigo|descricao|tributo|cst_reforma",
+      "fonte": "NT 2025.002 da NF-e (Reforma Tributaria) - em ajuste fino",
+      "observacao": "Lista preliminar. Atualizar quando a NT final for publicada.",
+      "hash": "bb4801fc4e324dba9f5978770d8bf72c5b7df8a10926340af7f3b58b4d7cc603"
+    },
+    "icms_aliquota": {
+      "versao": "2026.09.02",
+      "arquivo": "icms_aliquota.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/icms_aliquota.txt",
+      "linhas": 729,
+      "formato": "uf_origem|uf_destino|aliquota|tipo|vigencia_ini",
+      "fonte": "Resolucao do Senado 22/1989 (interestaduais) + legislacao interna de cada UF",
+      "hash": "322bf132905f2f64c3e334fa4e5f73b7c5fbb774ea75f119787d5fe4b375e903"
+    },
+    "tributo_transicao": {
+      "versao": "2026.09.02-preliminar",
+      "arquivo": "tributo_transicao.txt",
+      "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/tributo_transicao.txt",
+      "linhas": 8,
+      "formato": "ano|cbs_aliquota|ibs_uf_aliquota|ibs_mun_aliquota|icms_fator|iss_fator|pis_cofins_ativo|observacao",
+      "fonte": "EC 132/2023 e LC 214/2025",
+      "observacao": "Aliquotas de referencia sujeitas a regulamentacao. Atualizar a cada nova definicao.",
+      "hash": "9e4461da12253256b7d85a744d03bc4fc3c22eca7e31c2827db51ab52da1d834"
+    }
+  }
+}

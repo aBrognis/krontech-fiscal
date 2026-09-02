@@ -1,0 +1,96 @@
+1000|Cereais|
+1100|Produtos da industria de moagem; malte; amidos e feculas; gluten de trigo|
+1200|Sementes e frutos oleaginosos; plantas industriais ou medicinais; palhas e forragens|
+1300|Gomas, resinas e outros sucos e extratos vegetais|
+1400|Materias para entrancar e outros produtos de origem vegetal|
+1500|Gorduras e oleos animais ou vegetais; ceras de origem animal ou vegetal|
+1600|Preparacoes de carne, de peixes ou de crustaceos, de moluscos|
+1700|Acucares e produtos de confeitaria|
+1800|Cacau e suas preparacoes|
+1900|Preparacoes a base de cereais, farinhas, amidos, feculas ou de leite; produtos de pastelaria|
+2000|Preparacoes de produtos horticolas, de frutas ou de outras partes de plantas|
+2100|Preparacoes alimenticias diversas|
+2200|Bebidas, liquidos alcoolicos e vinagres|
+2300|Residuos e desperdicios das industrias alimentares; alimentos preparados para animais|
+2400|Fumo (tabaco) e seus sucedaneos manufaturados|
+2500|Sal; enxofre; terras e pedras; gessos, cal e cimentos|
+2600|Minerios, escorias e cinzas|
+2700|Combustiveis minerais, oleos minerais e produtos da sua destilacao; materias betuminosas; ceras minerais|
+2800|Produtos quimicos inorganicos; compostos de metais preciosos, de elementos radioativos|
+2900|Produtos quimicos organicos|
+3000|Produtos farmaceuticos|
+3100|Adubos ou fertilizantes|
+3200|Extratos tanantes e tintoriais; taninos; pigmentos; tintas e vernizes; mastiques|
+3300|Oleos essenciais e resinoides; produtos de perfumaria, de toucador e cosmeticos|
+3400|Saboes, agentes de superficie, preparacoes para lavagem, lubrificantes, ceras, velas|
+3500|Materias albuminoides; produtos a base de amidos ou feculas modificados; colas; enzimas|
+3600|Polvoras e explosivos; artigos de pirotecnia; fosforos; ligas pirofóricas|
+3700|Produtos para fotografia e cinematografia|
+3800|Produtos diversos das industrias quimicas|
+3900|Plasticos e suas obras|
+4000|Borracha e suas obras|
+4100|Peles, exceto a peleteria (peles com pelo), e couros|
+4200|Obras de couro; artigos de viagem, bolsas e artefatos semelhantes|
+4300|Peleteria (peles com pelo) e suas obras; peleteria artificial|
+4400|Madeira, carvao vegetal e obras de madeira|
+4500|Cortica e suas obras|
+4600|Obras de espartaria ou de cesteiro|
+4700|Pastas de madeira ou de outras materias fibrosas celulosicas; papel ou cartao para reciclar|
+4800|Papel e cartao; obras de pasta de celulose, de papel ou de cartao|
+4900|Livros, jornais, gravuras e outros produtos das industrias graficas; planos e plantas|
+5000|Seda|
+5100|La, pelos finos ou grosseiros; fios e tecidos de crina|
+5200|Algodao|
+5300|Outras fibras texteis vegetais; fios de papel e tecidos de fios de papel|
+5400|Filamentos sinteticos ou artificiais|
+5500|Fibras sinteticas ou artificiais, descontinuas|
+5600|Pastas (ouates), feltros e falsos tecidos; fios especiais; cordeis, cordas e cabos|
+5700|Tapetes e outros revestimentos para pisos, de materias texteis|
+5800|Tecidos especiais; tecidos tufados; rendas; tapecarias; passamanarias; bordados|
+5900|Tecidos impregnados, revestidos, recobertos ou estratificados; artigos para usos tecnicos|
+6000|Tecidos de malha|
+6100|Vestuario e seus acessorios, de malha|
+6200|Vestuario e seus acessorios, exceto de malha|
+6300|Outros artefatos texteis confeccionados; sortidos; artefatos usados; trapos|
+6400|Calcados, polainas e artefatos semelhantes; suas partes|
+6500|Chapeus e artefatos de uso semelhante; suas partes|
+6600|Guarda-chuvas, sombrinhas, guarda-sois, bengalas, chicotes e suas partes|
+6700|Penas e penugem preparadas e suas obras; flores artificiais; obras de cabelo|
+6800|Obras de pedra, gesso, cimento, amianto, mica ou de materias semelhantes|
+6900|Produtos ceramicos|
+7000|Vidro e suas obras|
+7100|Perolas, pedras preciosas ou semipreciosas, metais preciosos; bijuterias; moedas|
+7200|Ferro fundido, ferro e aco|
+7300|Obras de ferro fundido, ferro ou aco|
+7400|Cobre e suas obras|
+7500|Niquel e suas obras|
+7600|Aluminio e suas obras|
+7800|Chumbo e suas obras|
+7900|Zinco e suas obras|
+8000|Estanho e suas obras|
+8100|Outros metais comuns; ceramais (cermets); obras dessas materias|
+8200|Ferramentas, artefatos de cutelaria e talheres, e suas partes, de metais comuns|
+8300|Obras diversas de metais comuns|
+8400|Reatores nucleares, caldeiras, maquinas, aparelhos e instrumentos mecanicos, e suas partes|
+8500|Maquinas, aparelhos e materiais eletricos, e suas partes; aparelhos de som e imagem|
+8600|Veiculos e material para vias ferreas; aparelhos de sinalizacao|
+8700|Veiculos automoveis, tratores, ciclos e outros veiculos terrestres, suas partes e acessorios|
+8800|Aeronaves e aparelhos espaciais, e suas partes|
+8900|Embarcacoes e estruturas flutuantes|
+9000|Instrumentos de optica, fotografia, medida, controle, precisao; medico-cirurgicos|
+9100|Aparelhos de relojoaria e suas partes|
+9200|Instrumentos musicais; suas partes e acessorios|
+9300|Armas e municoes; suas partes e acessorios|
+9400|Moveis; mobiliario medico-cirurgico; colchoes; aparelhos de iluminacao; construcoes pre-fabricadas|
+9500|Brinquedos, jogos, artigos para divertimento ou esporte; suas partes e acessorios|
+9600|Obras diversas|
+9700|Objetos de arte, de colecao e antiguidades|
+0100|Animais vivos|
+0200|Carnes e miudezas, comestiveis|
+0300|Peixes e crustaceos, moluscos e outros invertebrados aquaticos|
+0400|Leite e laticinios; ovos de aves; mel natural; produtos comestiveis de origem animal|
+0500|Outros produtos de origem animal|
+0600|Plantas vivas e produtos de floricultura|
+0700|Produtos horticolas, plantas, raizes e tuberculos, comestiveis|
+0800|Frutas; cascas de citricos e de meloes|
+0900|Cafe, cha, mate e especiarias|

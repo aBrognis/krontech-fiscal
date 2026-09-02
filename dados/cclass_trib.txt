@@ -1,0 +1,15 @@
+000001|Situacao tributaria plena (aliquota padrao) - IBS/CBS||000
+000002|Aliquota reduzida em 60% (dispositivos medicos, medicamentos, etc.)||200
+000003|Aliquota reduzida em 30% (servicos de profissao regulamentada)||200
+000004|Isencao||400
+000005|Imunidade||400
+000006|Aliquota zero (cesta basica nacional)||400
+000007|Diferimento||550
+000008|Suspensao||550
+000009|Nao incidencia||400
+200001|Credito presumido - operacoes especificas||200
+400001|Regime especifico - combustiveis||000
+400002|Regime especifico - servicos financeiros||000
+400003|Regime especifico - planos de saude||000
+400004|Regime especifico - bens imoveis||000
+810001|Zona Franca de Manaus e Areas de Livre Comercio||000

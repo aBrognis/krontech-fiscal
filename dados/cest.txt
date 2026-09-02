@@ -1,0 +1,27 @@
+01.000.00||Autopecas|Autopecas
+02.000.00||Bebidas alcoolicas, exceto cerveja e chope|Bebidas alcoolicas, exceto cerveja e chope
+03.000.00||Cervejas, chopes, refrigerantes, aguas e outras bebidas|Cervejas, chopes, refrigerantes, aguas e outras bebidas
+04.000.00||Cigarros e outros produtos derivados do fumo|Cigarros e outros produtos derivados do fumo
+05.000.00||Cimentos|Cimentos
+06.000.00||Combustiveis e lubrificantes|Combustiveis e lubrificantes
+07.000.00||Energia eletrica|Energia eletrica
+08.000.00||Ferramentas|Ferramentas
+09.000.00||Lampadas, reatores e "starter"|Lampadas, reatores e "starter"
+10.000.00||Materiais de construcao e congeneres|Materiais de construcao e congeneres
+11.000.00||Materiais de limpeza|Materiais de limpeza
+12.000.00||Materiais eletricos|Materiais eletricos
+13.000.00||Medicamentos de uso humano e outros produtos farmaceuticos|Medicamentos de uso humano e outros produtos farmaceuticos
+14.000.00||Papeis, plasticos, produtos ceramicos e vidros|Papeis, plasticos, produtos ceramicos e vidros
+15.000.00||Pneumaticos, cameras de ar e protetores de borracha|Pneumaticos, cameras de ar e protetores de borracha
+16.000.00||Produtos alimenticios|Produtos alimenticios
+17.000.00||Produtos de papelaria|Produtos de papelaria
+18.000.00||Produtos de perfumaria e de higiene pessoal e cosmeticos|Produtos de perfumaria e de higiene pessoal e cosmeticos
+19.000.00||Produtos eletronicos, eletroeletronicos e eletrodomesticos|Produtos eletronicos, eletroeletronicos e eletrodomesticos
+20.000.00||Racoes para animais domesticos|Racoes para animais domesticos
+21.000.00||Sorvetes e preparados para fabricacao de sorvetes em maquinas|Sorvetes e preparados para fabricacao de sorvetes em maquinas
+22.000.00||Tintas e vernizes|Tintas e vernizes
+23.000.00||Veiculos automotores|Veiculos automotores
+24.000.00||Veiculos de duas e tres rodas motorizados|Veiculos de duas e tres rodas motorizados
+25.000.00||Venda de mercadorias pelo sistema porta a porta|Venda de mercadorias pelo sistema porta a porta
+26.000.00||Produtos das industrias alimenticias (outros)|Produtos das industrias alimenticias (outros)
+28.000.00||Produtos texteis (venda porta a porta)|Produtos texteis (venda porta a porta)
