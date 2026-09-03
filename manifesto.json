@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-02",
+  "gerado_em": "2026-09-03",
   "descricao": "Tabelas de referencia fiscal do KronTech. O app compara este manifesto com o empacotado e avisa quando ha versao mais nova. Cada arquivo e re-semeado sem sobrescrever linhas com origem='manual'.",
   "base_raw": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/",
   "tabelas": {
@@ -14,24 +14,24 @@
       "hash": "10740dfa5b568d2f04d12ea7ede487831816aa0f094cfdbdd8329831cf4e7fb6"
     },
     "ncm": {
-      "versao": "2026.09.02",
+      "versao": "2026.09.03",
       "arquivo": "ncm.txt",
       "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/ncm.txt",
-      "linhas": 96,
+      "linhas": 13229,
       "formato": "codigo|descricao|aliquota_ipi",
       "fonte": "Tabela NCM/SH da Receita Federal + TIPI (Decreto 11.158/2022)",
       "fonte_url": "https://portalunico.siscomex.gov.br/classif/api/publico/nomenclatura/download/json",
-      "hash": "02d61a5c794b06a44e75bbca4717c51dca551ac3f6210e9f09c63c01ec73acbe"
+      "hash": "81fe330e2395d3c75221fea4b7e37119ac8db5e653abe158f8458ae876c443c4"
     },
     "cest": {
-      "versao": "2026.09.02",
+      "versao": "2026.09.03",
       "arquivo": "cest.txt",
       "url": "https://raw.githubusercontent.com/aBrognis/krontech-fiscal/main/dados/cest.txt",
-      "linhas": 27,
+      "linhas": 1343,
       "formato": "codigo|ncm|descricao|segmento",
       "fonte": "Convenio ICMS 142/2018 (Anexos I a XXVI)",
       "fonte_url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2018/CV142_18",
-      "hash": "4b19b88a15e7478604498158fef0f45282058a08bbff9a6b56c0f6598cc320cd"
+      "hash": "3ea86b649e3fb8de3f89ca994664cadb25de5bfb95b9ce51fa5136b4e7f9dd9e"
     },
     "cst_icms": {
       "versao": "2026.09.02",

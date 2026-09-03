@@ -1,11 +1,12 @@
-// Monta dados/cest.txt a partir do Convenio ICMS 142/2018 (Anexos I a XXVI).
-// Nao ha API oficial estavel do CEST; a fonte pratica e a base publicada pelo
-// projeto "cest" (dados abertos consolidados). Ajuste FONTE_URL se necessario.
+// Monta dados/cest.txt a partir do Convenio ICMS 142/2018 (Anexos II a XXVI).
+// Nao ha API oficial estavel do CEST. A fonte pratica e um CSV consolidado
+// publicado no GitHub (colunas: anexo;item;cest;ncm;descricao). Ajuste FONTE_URL
+// se a fonte sair do ar — o formato de saida do KronTech nao muda.
 //
 // Formato de saida: codigo|ncm|descricao|segmento
 //   codigo   NN.NNN.NN
 //   ncm      8 digitos (pode repetir codigo p/ NCMs diferentes)
-//   segmento nome do anexo (Autopecas, Bebidas, ...)
+//   segmento nome do segmento (do numero do CEST, nao do texto do anexo)
 //
 // Uso:  node scripts/baixar-cest.mjs
 import { writeFileSync } from 'node:fs'
@@ -13,10 +14,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'dados', 'cest.txt')
-
-// Base consolidada em JSON (lista de { cest, ncm, descricao, segmento }).
-// Trocar para a fonte que voce preferir manter.
-const FONTE_URL = 'https://raw.githubusercontent.com/vinigracindo/cest/master/data/cest.json'
+const FONTE_URL = 'https://raw.githubusercontent.com/wevertonmbrtx/ncm-cest/main/cest_ncm.csv'
 
 const SEGMENTOS = {
   '01': 'Autopecas', '02': 'Bebidas alcoolicas, exceto cerveja e chope',
@@ -36,33 +34,55 @@ const SEGMENTOS = {
   '28': 'Produtos texteis (venda porta a porta)',
 }
 
-const limpa = (s) => String(s || '').replace(/\s+/g, ' ').replace(/\|/g, '/').trim()
+// remove acento e reduz a ASCII (o KronTech aplica unaccent na busca)
+const semAcento = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+const limpa = (s) => semAcento(s).replace(/\s+/g, ' ').replace(/[|;]/g, '/').trim()
+
+// parser de CSV simples com ; e aspas opcionais
+function linhaCsv(l) {
+  const out = []
+  let cur = ''
+  let dentro = false
+  for (let i = 0; i < l.length; i++) {
+    const c = l[i]
+    if (c === '"') { dentro = !dentro; continue }
+    if (c === ';' && !dentro) { out.push(cur); cur = ''; continue }
+    cur += c
+  }
+  out.push(cur)
+  return out
+}
 
 const run = async () => {
   console.log('Baixando CEST de', FONTE_URL)
-  const resp = await fetch(FONTE_URL, { headers: { Accept: 'application/json' } })
+  const resp = await fetch(FONTE_URL, { headers: { Accept: 'text/csv' } })
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-  const arr = await resp.json()
-  if (!Array.isArray(arr) || !arr.length) throw new Error('resposta vazia ou formato inesperado')
+  const texto = (await resp.text()).replace(/^﻿/, '')
+  const linhas = texto.split(/\r?\n/).filter(Boolean)
+  const header = linhaCsv(linhas[0]).map((h) => h.trim().toLowerCase())
+  const iCest = header.indexOf('cest')
+  const iNcm = header.indexOf('ncm')
+  const iDesc = header.indexOf('descricao')
+  if (iCest < 0 || iDesc < 0) throw new Error('cabecalho inesperado: ' + header.join(','))
 
-  const linhas = arr
-    .map((it) => {
-      const cestBruto = String(it.cest || it.CEST || '').replace(/\D/g, '')
-      if (cestBruto.length !== 7) return null
-      const codigo = `${cestBruto.slice(0, 2)}.${cestBruto.slice(2, 5)}.${cestBruto.slice(5, 7)}`
-      const ncm = String(it.ncm || it.NCM || '').replace(/\D/g, '').slice(0, 8)
-      const descricao = limpa(it.descricao || it.descricao_oficial || it.description)
-      const segmento = SEGMENTOS[cestBruto.slice(0, 2)] || ''
-      if (!descricao) return null
-      return `${codigo}|${ncm}|${descricao}|${segmento}`
-    })
-    .filter(Boolean)
+  const saida = []
+  for (const l of linhas.slice(1)) {
+    const cols = linhaCsv(l)
+    const cestBruto = String(cols[iCest] || '').replace(/\D/g, '')
+    if (cestBruto.length !== 7) continue
+    const codigo = `${cestBruto.slice(0, 2)}.${cestBruto.slice(2, 5)}.${cestBruto.slice(5, 7)}`
+    const ncm = String(cols[iNcm] || '').replace(/\D/g, '').slice(0, 8)
+    const descricao = limpa(cols[iDesc])
+    const segmento = SEGMENTOS[cestBruto.slice(0, 2)] || ''
+    if (!descricao) continue
+    saida.push(`${codigo}|${ncm}|${descricao}|${segmento}`)
+  }
 
-  // dedup por codigo+ncm
+  // dedup por codigo+ncm, ordena
   const map = new Map()
-  for (const l of linhas) {
-    const [c, n] = l.split('|')
-    map.set(`${c}|${n}`, l)
+  for (const s of saida) {
+    const [c, n] = s.split('|')
+    map.set(`${c}|${n}`, s)
   }
   const final = [...map.values()].sort()
 
